@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}
+     Dashboard
+{% endblock title %}
+
+{% block content %}
+  <!-- Alerts -->
+  {% include 'partials/_alerts.html' %}
+  <section id="showcase-inner how-it-works" class="py-5 how-it-works">
+    <div class="container my-5">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1 class="display-4">User Dashboard</h1>
+          <p class="lead">Manage your  Coralcity account</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="dashboard" class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Welcome {{user.first_name}}</h2>
+          {% if contacts %}
+          <p>Here are the property listings that you have inquired about</p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Property</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for contact in contacts %}
+                 <tr>
+                  <td>{{contact.id}}</td>
+                  <td>{{contact.listing}}</td>
+                  <td>
+                    <a class="btn btn-light" href="{% url "listings:listing" contact.listing_id %}">View Listing</a>
+                  </td>
+                </tr>
+               {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        {% else %}
+           <p>You Dont Have Any Inquries</p>
+        {% endif %}
+    </div>
+  </section>
+{% endblock content %}

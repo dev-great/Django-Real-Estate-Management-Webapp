@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+     About Us
+{% endblock title %}
+
+{% block content %}
+ 
+ <section class="statistic" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <h3>Our’s Company<br>Statistics</h3>
+            <p>In this space market-facing, yet UI work flows , or bake it in. Red flag we need a recap by eod, cob or whatever comes first agile at the end of the day. Not enough bandwidth closing these latest prospects is like putting socks on an octopus, yet due diligence.</p>
+            <p>We need to get all stakeholders up to speed and in the right place hard stop, or technologically savvy or pre launch. Pro-sumer software commitment to the cause offline this discussion and wiggle room blue sky. Beef up teams were able to drive adoption and awareness. Screw the pooch killing it.</p>
+          </div>
+          <div class="col-12 col-lg-6 statistic-wrapper">
+            <div class="statistic-box text-center">
+              <p>3854</p>
+              <p>Clients</p>
+            </div>
+            <div class="statistic-box text-center">
+              <p>748</p>
+              <p>Appartments</p>
+            </div>
+            <div class="statistic-box text-center">
+              <p>14</p>
+              <p>Awards</p>
+            </div>
+            <div class="statistic-box text-center">
+              <p>24</p>
+              <p>Employees</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+     <!------------------------------------------------ AGENTS SECTION -->
+    <section id="agents" class="agents">
+      <div class="container">
+        <div class="row agents-services">
+          <div class="col-12 agents-title">
+            <h3>Meet Our Agents</h3>
+            <p>In this space market-facing, yet UI work flows , or bake it in.<br>Red flag we need a recap by eod, cob or whatever comes<br>first agile at the end of the day. </p>
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          {% if realtors %}
+        {% for realtor in realtors %}
+          <!-- Agent  -->
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="appartment-box">
+              <div class="appartment-image">
+                <!-- Agent Image  -->
+                <img src="{{realtor.photo.url}}" alt="">
+              </div>
+              <div class="appartment-info">
+                <div class="appartment-title">
+                  <!-- Agent Title  -->
+                  <p>Realtor</p>
+                </div>
+                <div class="appartment-title">
+                  <div class="left agent-name">
+                    <!-- Agent name  -->
+                    <p> {{realtor.name}}</p>
+                  </div>
+                  <div class="agent-social right flex-center">
+                    <a href="#"><img src="{%static 'images/facebook.svg'%}" alt=""></a>
+                    <a href="#"><img src="{%static 'images/twitter.svg'%}" alt=""></a>
+                    <a href="#"><img src="{%static 'images/dribble.svg'%}" alt=""></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          {% endfor %}
+          {% else %}
+          <div class="col-md-12">
+            <p>No Realtors Avialbale</p>
+        </div>
+      {% endif %}
+
+
+
+        </div>
+        </div>
+      </section>
+{% endblock content %}
+

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!------------------------------------------------ APPARTMENTS SECTION -->
+    <section id="appartments" class="appartments">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2>More Then 500+<br>Appartments For Sell & Rent</h2>
+          </div>
+        </div>
+        <div class="row">
+
+
+          {% if propertys %}
+
+          {% for Property in propertys %}
+            
+          {% include 'snippets/_single_item.html' %}
+                   
+          {% endfor %}
+
+          {% else %}
+
+          <p> No Property available in this region</p>
+
+          {% endif %}
+        </div>
+      </div>
+    </section>
+
+
+{% endblock content %}

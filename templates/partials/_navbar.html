@@ -1,0 +1,53 @@
+{% load static %}
+<!-- Navbar -->
+ <header id="home">
+<nav class="animate">
+        <div class="container">
+          <div class="logo left">
+            <!-- Logo -->
+            <a href="#home">Coralcity</a>
+            
+            </li>
+          </div>
+          <div class="menu-button hide right pointer">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu left">
+            <div class="page-menu left">
+              <!-- Navigation -->
+              <li><a href="{% url 'pages:index' %}">Home</a></li>
+              <li><a href="{% url 'pages:about' %}">About</a></li>
+              <li><a href="{% url 'listings:listings' %}">Appartments</a></li>
+              <li><a href="{% url 'accounts:dashborad' %}">Dashboard</a></li>
+              <li><a href="{% url 'accounts:login_view' %}">Agents</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </div>
+            <div class="registration flex-center">
+              <div class="join-us">
+                <!-- Join Us Button -->
+                 <li class="pointer animate"><a href="javascript:{document.getElementById('logout').submit()}">Logout</a>
+                 <form  method="post" id="logout" action="{% url "accounts:logout" %}">
+                  {% csrf_token %}
+                  <input type="hidden">
+              </form>
+            </li>
+              </div>
+              <div class="getting-started">
+                <!-- Get Started Button -->
+                <li class="main-btn pointer text-center animate"><a href="{% url 'accounts:register_view' %}">Become an agent</a></li>
+              </div>
+            </div>
+            <div class="registration flex-center">
+              <div class="join-us">
+                <!-- Join Us Button -->
+               
+              </div>
+              <div class="getting-started">
+                <!-- Get Started Button -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
