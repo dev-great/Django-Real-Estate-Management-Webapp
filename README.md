@@ -1,6 +1,7 @@
 ## Coralcity Real-Estate Django Website 
  This website is build for Coralcity Real-Estate business, You will get an admin page where you can manage your users, listings, realtors and queries from other users about listings. You will get search page where users can find listings from your database which suits their needs. You will get a listing page where users can see listings and when they click on those listings they will get a detailed page of that listing with photos of the property. You can manage users. All the passwords of the users are stored in hash value to protect users privacy. Link to your all Social Media pages. About page, Apartments, Dashbord, Agents, Contact us, Log out, Become an agent.
-
+![Coralcity - Real-estate management - Google Chrome 7_6_2021 10_41_13 AM](https://user-images.githubusercontent.com/31458994/124581948-7a412280-de49-11eb-9ec4-bbd271fadf20.png)
+![Coralcity - Real-estate management - Google Chrome 7_6_2021 10_41_32 AM](https://user-images.githubusercontent.com/31458994/124582025-8b8a2f00-de49-11eb-88fd-318f792b2815.png)
 ### Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
