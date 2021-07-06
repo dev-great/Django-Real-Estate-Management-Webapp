@@ -44,7 +44,7 @@ state_choices = {
         'NG-EKT': 'Ekiti',
         'NG-ENU': 'Enugu',
         'NG-FCT': 'Federal Capital Territory',
-        'NG-GOM': 'Gombe'
+        'NG-GOM': 'Gombe',
         'NG-IMO': 'Imo',
         'NG-JIG': 'Jigawa',
         'NG-KAD': 'Kaduna',
