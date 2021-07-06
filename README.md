@@ -49,4 +49,3 @@ Install pip if it is not installed yet in your system
 * Python 3
 * sqlite3
 * License
-This project is licensed under the MIT License - see the LICENCE file for details
