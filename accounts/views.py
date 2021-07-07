@@ -3,8 +3,9 @@ from django.http import HttpResponse
 from django.contrib import messages,auth
 
 from contacts.models import Contact
-
 from django.contrib.auth.models import User
+
+
 
 # Create your views here.
 def register_view(request):
