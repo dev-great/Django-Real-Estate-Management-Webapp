@@ -25,7 +25,7 @@ Install pip if it is not installed yet in your system
 * deactivate
 * Installing
 * Clone this repository
-* https://github.com/GR8T/coralcity
+* https://github.com/dev-great/coralcity
 * Cd into the cloned app, create a virtualenv and activate(see instruction above for steps to create a virtualenv)
 * Create a .env file, copy the variables in the .env_sample in the root directory of the project and set up the configurations according to your system.
 

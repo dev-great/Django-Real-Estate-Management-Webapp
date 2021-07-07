@@ -1,6 +1,7 @@
 {% load static %}
 <!-- Navbar -->
  <header id="home">
+
 <nav class="animate">
         <div class="container">
           <div class="logo left">
@@ -28,12 +29,12 @@
               <div class="join-us">
                 <!-- Join Us Button -->
                  <li class="pointer animate"><a href="javascript:{document.getElementById('logout').submit()}">Logout</a>
-                 <form  method="post" id="logout" action="{% url "accounts:logout" %}">
+                 <form  method="post" id="logout" action="{% url 'accounts:logout' %}">
                   {% csrf_token %}
                   <input type="hidden">
               </form>
             </li>
-              </div>
+!`    </div>
               <div class="getting-started">
                 <!-- Get Started Button -->
                 <li class="main-btn pointer text-center animate"><a href="{% url 'accounts:register_view' %}">Become an agent</a></li>
