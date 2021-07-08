@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -143,8 +144,4 @@ MESSAGE_TAGS = {
 
 }
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER='gmarshal070@gmail'
-EMAIL_HOST_PASWORD='DesIre2015'
-EMAIL_USE_TLS=True
+django_heroku.settings(locals())
