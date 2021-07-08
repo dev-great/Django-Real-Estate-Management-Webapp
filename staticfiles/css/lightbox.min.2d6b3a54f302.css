@@ -68,7 +68,7 @@ html.lb-disable-scrolling {
   width: 32px;
   height: 32px;
   margin: 0 auto;
-  background: url(../images/loading.gif) no-repeat;
+  background: url("../images/loading.fa54e1a0b386.gif") no-repeat;
 }
 .lb-nav {
   top: 0;
@@ -93,7 +93,7 @@ html.lb-disable-scrolling {
   width: 34%;
   left: 0;
   float: left;
-  background: url(../images/prev.png) left 48% no-repeat;
+  background: url("../images/prev.75a9130dc4d6.png") left 48% no-repeat;
   filter: alpha(Opacity=0);
   opacity: 0;
   -webkit-transition: opacity 0.6s;
@@ -109,7 +109,7 @@ html.lb-disable-scrolling {
   width: 64%;
   right: 0;
   float: right;
-  background: url(../images/next.png) right 48% no-repeat;
+  background: url("../images/next.e63bebbc4b19.png") right 48% no-repeat;
   filter: alpha(Opacity=0);
   opacity: 0;
   -webkit-transition: opacity 0.6s;
@@ -161,7 +161,7 @@ html.lb-disable-scrolling {
   float: right;
   width: 30px;
   height: 30px;;
-  background: url(../images/close.png) top right no-repeat
+  background: url("../images/close.f34d829ef8b8.png") top right no-repeat
   text-align: right;
   outline: 0;
   filter: alpha(Opacity=70);
