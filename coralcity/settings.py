@@ -26,7 +26,7 @@ SECRET_KEY = '+=mb2q!t+yg7(m$!_$iki#2*z(+ub^lcas0jx$l2-dp%bp8pt)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sheltered-dawn-17012.herokuapp.com', '127.0.0.1:8000']
+ALLOWED_HOSTS = ['sheltered-dawn-17012.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
