@@ -1,4 +1,5 @@
 asgiref==3.4.0
+django-jinja==2.9.0
 CacheControl==0.12.6
 cachetools==4.2.2
 certifi==2021.5.30
