@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
-import heroku
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '+=mb2q!t+yg7(m$!_$iki#2*z(+ub^lcas0jx$l2-dp%bp8pt)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sheltered-dawn-17012.herokuapp.com', '127.0.0.1:8000']
 
 
 # Application definition
@@ -125,7 +125,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR , 'static')
+STATIC_ROOT = os.path.join(BASE_DIR , 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS=[(os.path.join(BASE_DIR, 'coralcity/static'))]
 
@@ -143,5 +143,3 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 
 }
-
-django_heroku.settings(locals())
