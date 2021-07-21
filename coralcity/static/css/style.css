@@ -305,12 +305,16 @@ header nav {
   color:#fff;;
 }
 .hero-image {
-  width: 100%;
+ width: 88%;
   height: 630px;
+  float: right;
+
+  background-image: url('../images/hero.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  right: -60px;
 }
 .hero-image-info {
   position: absolute;
