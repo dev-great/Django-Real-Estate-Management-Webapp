@@ -6191,6 +6191,10 @@ a.text-primary:hover, a.text-primary:focus {
 .text-secondary {
   color: #343a40; !important; }
 
+.text-secondary div {
+  color: #343a40; !important;
+  size: 12px; }
+
 a.text-secondary:hover, a.text-secondary:focus {
   color: #fff; !important; }
 
