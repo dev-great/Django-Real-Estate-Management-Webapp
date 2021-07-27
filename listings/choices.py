@@ -9,7 +9,13 @@ bedroom_choices = {
   '8':8,
   '9':9,
   '10':10
-  }
+}
+
+type_choices = {
+  'buy':'BUY',
+  'sell':'SELL',
+  'rent':'RENT',
+}
 
 price_choices = {
   '500000':'₦500,000',

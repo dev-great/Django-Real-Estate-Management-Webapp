@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect,get_object_or_404
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.http import HttpResponse
 
-from listings.choices import price_choices , bedroom_choices , state_choices
+from listings.choices import price_choices , bedroom_choices , state_choices, type_choices
 
 from .models import Listing
 
@@ -56,5 +56,6 @@ def search(request):
         'state_choices' : state_choices,
         'bedroom_choices' : bedroom_choices,
         'price_choices' : price_choices,
+        'type_choices' : type_choices,
         'values': request.GET,
 		})

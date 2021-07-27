@@ -5,7 +5,7 @@
     Author: Rokvic Sasa / Graphberry
     Author URI: https://www.graphberry.com/
     Version: 1.0
--------------------------------------------------------------*/
+------------------------------------------------------------*/
 
 
 /*-----------------------------------------------------------
@@ -653,7 +653,7 @@ header nav {
   background-image: url('../images/add.png');
 }
 .add2 {
-  s url('../images/add2.png');
+  background-image: url('../images/add2.png');
 }
 .add3 {
   background-image: url('../images/add3.png');
@@ -695,13 +695,13 @@ header nav {
     9. Footer
 -------------------------------------------------------------*/
 footer {
-  background-color: #1F373D;
+  background-color: #228b22;
   width: 100%;
   color: #fff;
   padding: 65px 0px;
 }
 .footer-top {
-  border-bottom: 1px solid #919EB1;
+  border-bottom: 1px solid #fff;
   padding-bottom: 45px;
 }
 .Newsletter input {
@@ -712,7 +712,7 @@ footer {
   margin-top: 26px;
 }
 .newsletter-btn {
-  background-color: #fbfbfb;
+  background-color: #fbfbfc;
   width: 20%;
   height: 70px;
   border: 0px;
@@ -722,7 +722,7 @@ footer {
   margin-top: 26px;
 }
 .newsletter-btn:hover {
-  background-color: #FFCC01;
+  background-color: #000;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -731,7 +731,7 @@ footer {
   margin-bottom:60px;
 }
 .footer-logo p {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
 }
 .footer-bottom {
