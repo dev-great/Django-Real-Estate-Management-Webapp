@@ -7,7 +7,7 @@ from realtors.models import Realtor
 # Create your models here.
 
 class Listing(models.Model):
-	realtor = models.ForeignKey(Realtor , on_delete=models.DO_NOTHING)
+	realtor = models.ForeignKey(Realtor , on_delete=models.DO_NOTHING, blank=True)
 	title = models.CharField(max_length=200)
 	address = models.CharField(max_length=200)
 	city = models.CharField(max_length=100)
@@ -16,6 +16,7 @@ class Listing(models.Model):
 	description = models.TextField(blank=True)
 	price = models.IntegerField()
 	bedrooms = models.IntegerField()
+	property_type =models.CharField(max_length=10)
 	bathrooms = models.IntegerField()
 	garage = models.IntegerField(default=0)
 	sqft = models.IntegerField()

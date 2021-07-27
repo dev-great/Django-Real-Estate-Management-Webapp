@@ -21,8 +21,12 @@
               <li><a href="{% url 'pages:index' %}">Home</a></li>
               <li><a href="{% url 'pages:about' %}">About</a></li>
               <li><a href="{% url 'listings:listings' %}">Appartments</a></li>
+
+            {% if user.is_authenticated %}
               <li><a href="{% url 'accounts:dashborad' %}">Dashboard</a></li>
+              {% else %}
               <li><a href="{% url 'accounts:login_view' %}">Agents</a></li>
+              {% endif %}
               <li><a href="#contact">Contact Us</a></li>
             </div>
             <div class="registration flex-center">
