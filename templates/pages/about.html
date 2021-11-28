@@ -7,14 +7,47 @@
 {% endblock title %}
 
 {% block content %}
- 
+   <section class="home_banner_area hero"  id="about">
+    <div class="banner_inner d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="banner_content d-flex flex-md-row flex-column">
+              <div class="banner-left text-md-right">
+                <h1 class="text-uppercase">About Us</h1>
+              </div>
+              <div class="banner-right position-relative">
+                <p>
+                  Koral City Properties as a service-based company.
+                </p>
+                <span class="main_btn mt-4 mt-md-0" href="#">
+                  <a href="" >Home</a> 
+                  <i class="fa fa-arrow-right mx-2"></i>
+                  <a href="#">About</a> 
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
  <section class="statistic" id="about">
+
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-6">
             <h3>Our’s Company<br>Coralcity</h3>
-            <p>Coralcity is a real estate investment, development & construction company with services in real estate development, estate design & building, real estate marketing & brokerage, real estate investment & management services.</p>
-            <p>Coralcity also provide an online platform aiding real estate companies to advertise their services & properties to possible customers, while also aiding the public to find authentic properties to buy or rent in Nigeria and abroad with ease. It is one of the Topnouch real estate investment firms in the country whose aim is to deliver cutting edge and competitive real estate solutions to our prospective clients.</p>
+            <p>Koral City Properties offers property owners, developers and buyers/renters a viable housing market. Customers can source and connect with professional agents for the most advanced and eco-friendly housing. Established in 2021, Koral City believes everyone deserves a home with the most advanced technology and Eco-Friendly means. All lives matter.
+              <h3>Why you should choose us</h3>
+              <ul>  
+                <li>1. We offer land verification and authentication.</li><br>
+                <li>2. We sell, buy, and rent luxury properties at affordable rates.</li><br>
+                <li>3. We offer a conducive platform for property owners to showcase their services.</li><br>
+                <li>4. We have well trained professionals as consultants, developers and agents.</li><br>
+                <li>5. We are budget friendly.</li>
+                <li>  </li>
+              </ul></p>
           </div>
           <div class="col-12 col-lg-6 statistic-wrapper">
             <div class="statistic-box text-center">
@@ -43,7 +76,7 @@
         <div class="row agents-services">
           <div class="col-12 agents-title">
             <h3>Meet Our Agents</h3>
-            <p>They provide one of the most professional, informative, loyal and dedicated services<br> in the real estate industry. Clients’ satisfaction is their number one priority.</p>
+            <p>They provide one of the most professional, informative, loyal and dedicated services<br> in the real estate industry. Client’s satisfaction is their number one priority.</p>
           </div>
         </div>
       
@@ -53,8 +86,8 @@
         {% for realtor in realtors %}
           <!-- Agent  -->
           <div class="col-12 col-md-12 col-lg-4">
-            <div class="appartment-box">
-              <div class="appartment-image">
+            <div class="card">
+              <div class="card-img", style="">
                 <!-- Agent Image  -->
                 <img src="{{realtor.photo.url}}" alt="">
               </div>

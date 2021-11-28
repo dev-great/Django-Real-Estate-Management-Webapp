@@ -6,11 +6,11 @@
         <div class="container">
           <div class="logo left">
             <!-- Logo -->
-            <a href="#home">Coralcity</a>
+            <a href="#home">Koral.</a>
             
             </li>
           </div>
-          <div class="menu-button hide right pointer">
+          <div class="menu-button hide right pointer" style=" color:  black;">
             <span></span>
             <span></span>
             <span></span>
@@ -19,28 +19,20 @@
             <div class="page-menu left">
               <!-- Navigation -->
               <li><a href="{% url 'pages:index' %}">Home</a></li>
-              <li><a href="{% url 'pages:about' %}">About</a></li>
-              <li><a href="{% url 'listings:listings' %}">Appartments</a></li>
-
-            {% if user.is_authenticated %}
-              <li><a href="{% url 'accounts:dashborad' %}">Dashboard</a></li>
-              {% else %}
-              <li><a href="{% url 'accounts:login_view' %}">Agents</a></li>
-              {% endif %}
-              <li><a href="#contact">Contact Us</a></li>
+              <li><a href="{% url 'pages:about' %}">About-Us</a></li>
+              <li><a href="{% url 'listings:listings' %}">Properties</a></li>
+              <li><a href="{% url 'Ages:Ages' %}">Ages Verification</a></li>
+              <li><a href="#contact">Contact-Us</a></li>
             </div>
             <div class="registration flex-center">
               <div class="join-us">
                 <!-- Join Us Button -->
-                 <li class="pointer animate"><a href="javascript:{document.getElementById('logout').submit()}">Logout</a>
-                   <form  method="post" id="logout" action="{% url 'accounts:logout' %}">
-                    {% csrf_token %}
-                    <input type="hidden">
-                   </form>
-                </li>    </div>
+                    <li class="pointer animate"><a href="{% url 'accounts:login_view' %}">Agents</a>
+                 </li>    
+                </div>
                   <div class="getting-started">
                     <!-- Get Started Button -->
-                    <li class="main-btn pointer text-center animate"><a href="{% url 'accounts:register_view' %}">Become an agent</a></li>
+                   <a href="{% url 'accounts:register_view' %}"><li class="main-btn pointer text-center animate">Become an agent</li></a>
                   </div>
                 </div>
                 <div class="registration flex-center">

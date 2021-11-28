@@ -1624,12 +1624,12 @@ fieldset:disabled a.btn {
   pointer-events: none; }
 
 .btn-primary {
-  color: #ffc107;
-  background-color:#fff;
-  border-color: #fff; }
+  color: #fff
+  background-color:#ffc107;
+  border-color: #ffc107; }
   .btn-primary:hover {
-    color: #fff;
-    background-color: #ffc107;
+    color: #000;
+    background-color: #fff;
     border-color: #ffc107; }
   .btn-primary:focus, .btn-primary.focus {
     box-shadow: 0 0 0 0.2rem rgba(16, 40, 78, 0.5); }
@@ -1648,12 +1648,12 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
   color: #212529;
-  background-color: #228b22;
-  border-color: #228b22; }
+  background-color: #FFCC01;
+  border-color: #FFCC01; }
   .btn-secondary:hover {
-    color: #fff;
-    background-color: #29ab88;
-    border-color: #26a17f; }
+    color: #000;
+    background-color: #FFfC01;
+    border-color: #FFfC01; }
   .btn-secondary:focus, .btn-secondary.focus {
     box-shadow: 0 0 0 0.2rem rgba(48, 202, 160, 0.5); }
   .btn-secondary.disabled, .btn-secondary:disabled {
@@ -3098,7 +3098,7 @@ input[type="button"].btn-block {
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  background-color: green;
+  background-color: #FFCC01;;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
   .card-header:first-child {
     border-radius: calc( 0.25rem - 1px) calc( 0.25rem - 1px) 0 0; }
@@ -4279,7 +4279,7 @@ button.close {
   vertical-align: text-top !important; }
 
 .bg-primary {
-  background-color: green; !important; }
+  background-color: #FFCC01; !important; }
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
@@ -6193,7 +6193,7 @@ a.text-primary:hover, a.text-primary:focus {
 
 .text-secondary div {
   color: #343a40; !important;
-  size: 12px; }
+  size: 10px; }
 
 a.text-secondary:hover, a.text-secondary:focus {
   color: #fff; !important; }

@@ -22,19 +22,19 @@
             <div class="hero-image">
               <div class="hero-image-info light-bg flex-center">
                 <div class="info flex-center">
-                  <img src="{%static './images/call-icon.svg'%}" alt="">
+                  <img src="" alt="">
                   <!-- Phone -->
-                  <p><a href=""> Buy</p></a>
+                  <p><a href="{% url 'listings:search' %}"> Buy</p></a>
                 </div>
                 <div class="info flex-center">
-                  <img src="{%static './images/point-icon.svg'%}" alt="">
+                  <img src="" alt="">
                   <!-- Place -->
-                  <p><a href="">Sell</p></a>
+                  <p><a href="{% url 'listings:search' %}">Sell</p></a>
                 </div>
                 <div class="info flex-center">
-                  <img src="{%static './images/point-icon.svg'%}" alt="">
+                  <img src="" alt="">
                   <!-- Place -->
-                  <p><a href="">Ages Verification</p></a>
+                  <p><a href="{% url 'Ages:Ages' %}">Ages Verification</p></a>
                 </div>
               </div>
             </div>
@@ -80,19 +80,19 @@
                         <i class="fas fa-map-marker text-secondary Black-text"></i> {{listing.city}} {{listing.state}}, {{listing.zipcode}}</p>
                     </div>
                     <hr>
-                    <div class="row py-2 text-secondary">
+                    <div class="row py-1 text-secondary">
                       <div class="col-6">
-                        <i class="fas fa-th-large"></i> Type: {{listing.property_type}}</div>
+                        <p> <i class="fas fa-th-large"></i> Type: {{listing.property_type}}</p></div>
                       <div class="col-6">
-                        <i class="fas fa-bath"></i> Bathroom: {{listing.bathrooms}}</div>
+                       <p> <i class="fas fa-bath"></i> Bathroom: {{listing.bathrooms}}</p></div>
                     </div>
-                    <div class="row py-2 text-secondary">
+                    <div class="row py-1 text-secondary">
                       <div class="col-6 text-secondary">
-                        <i class="fas fa-car"></i> Garage: {{listing.garage}}</div>
+                       <p> <i class="fas fa-car"></i> Garage: {{listing.garage}}</p></div>
                       <div class="col-6 text-secondary">
-                        <i class="fas fa-bed"></i> Bedroom: {{listing.bedrooms}}</div>
+                       <p> <i class="fas fa-bed"></i> Bedroom: {{listing.bedrooms}}</p></div>
                     </div>
-                    <a href="{% url "listings:listing" listing.id %}" class="btn btn-primary btn-block">More Info</a>
+                    <a href="{% url "listings:listing" listing.id %}" class="btn main-btn pointer text-center animate">More Info</a>
                   </div>
                 </div>
               </div>
@@ -158,22 +158,22 @@
     <div class="container">
       <div class="row text-center">
         <div class="col-md-4">
-          <i class="fas fa-comment fa-4x mr-4"></i>
+          <i class="fas fa-home  fa-3x mr-3"></i>
           <hr>
           <h3>Consulting Services</h3>
-          <p> Coralcity gives specialized investment and financial advice to clients looking to buy, sell or invest in property. We'll work closely with you throughout the process of buying and selling of your properties.</p>
+          <p style=" text-align:justify-all;"> KoralCity Properties gives specialized investment and financial advice to clients looking to buy, sell or invest in property. We'll work closely with you throughout the process of buying and selling of your properties.</p>
         </div>
         <div class="col-md-4">
-          <i class="fas fa-home fa-4x mr-4"></i>
+          <i class="fas fa-key fa-3x mr-3"></i>
           <hr>
           <h3>Propery Management</h3>
-          <p>At Coralcity, we handle the operations, maintenance, and administration of properties rentals for the owners and also market rentals rates at competitive price while complying with rental laws.</p>
+          <p style=" text-align:justify-all;">At KoralCity Properties, we handle the operations, maintenance, and administration of properties rentals for the owners and also market rentals rates at competitive price while complying with rental laws.</p>
         </div>
         <div class="col-md-4">
-          <i class="fas fa-suitcase fa-4x mr-4"></i>
+          <i class="fas fa-money-bill-alt fa-3x mr-3"></i>
           <hr>
           <h3>Renting & Selling</h3>
-          <p>Our property managers at Coralcity set competitive rent prices and strategies to attract clients to the property for rent or sell very fast with the first impression on  potential clients . </p>
+          <p style=" text-align:justify-all;">Our property managers at KoralCity Properties set competitive rent prices and strategies to attract clients to the property for rent or sell very fast with the first impression on  potential clients . </p>
         </div>
       </div>
     </div>

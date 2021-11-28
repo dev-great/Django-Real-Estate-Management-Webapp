@@ -2,6 +2,29 @@
 {% load humanize %}
 
 {% block content %}
+<section class="home_banner_area hero"  id="about">
+    <div class="banner_inner d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="banner_content d-flex flex-md-row flex-column">
+              <div class="banner-left text-md-right">
+                <h1 class="text-uppercase">Properties</h1>
+              </div>
+              <div class="banner-right position-relative">
+                <p>{{listing.title}} |  {{listing.city}} {{listing.state}}, {{listing.zipcode}}</p>
+                <span class="main_btn mt-4 mt-md-0" href="#">
+                  <a href="" >Home</a> 
+                  <i class="fa fa-arrow-right mx-2"></i>
+                  <a href="#">Listing</a> 
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Alerts -->
               {% include 'partials/_alerts.html' %}
@@ -10,7 +33,7 @@
   <!-- Listing -->
   <section id="listing" class="py-5">
     <div class="container my-5">
-      <a href="{% url 'listings:listings' %}" class="btn btn-light mb-4">Back To Listings</a>
+      <a href="{% url 'listings:listings' %}" class="btn main-btn pointer text-center animate mb-4">Back To Listings</a>
       <div class="row">
         <div class="col-md-9">
           <!-- Home Main Image -->
@@ -121,10 +144,12 @@
             <img class="card-img-top" src="{{listing.realtor.photo.url}}" alt="Seller of the month">
             <div class="card-body">
               <h5 class="card-title">Property Realtor</h5>
-              <h6 class="text-secondary">{{listing.realtor.name}}</h6>
+              <h6 class="text-secondary">Realtor name: {{listing.realtor.name}}</h6>
+               <h6 class="text-secondary">Number: {{listing.realtor.phone}}</h6>
+                <h6 class="text-secondary">Email: {{listing.realtor.email}}</h6>
             </div>
           </div>
-          <button class="btn-primary btn-block btn-lg" data-toggle="modal" data-target="#inquiryModal">Make An Inquiry</button>
+          <button class="btn main-btn pointer text-center animate btn-block btn-lg" data-toggle="modal" data-target="#inquiryModal">Make An Inquiry</button>
         </div>
       </div>
     </div>

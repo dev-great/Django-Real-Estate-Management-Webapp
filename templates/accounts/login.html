@@ -2,13 +2,38 @@
 {% load static %}
 
 {% block content %}
+<section class="home_banner_area hero"  id="about">
+    <div class="banner_inner d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="banner_content d-flex flex-md-row flex-column">
+              <div class="banner-left text-md-right">
+                <h1 class="text-uppercase">Agents</h1>
+              </div>
+              <div class="banner-right position-relative">
+                <p>
+                 Wanna be a realtor agent? here is all you have to do.
+                </p>
+                <span class="main_btn mt-4 mt-md-0" href="#">
+                  <a href="" >Home</a> 
+                  <i class="fa fa-arrow-right mx-2"></i>
+                  <a href="#">About</a> 
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 {% csrf_token %}
 <section id="works" class="how-it-works">
       <div class="container my-5">
         <div class="row">
           <div class="col-12 works-title">
             <h3>How it works?</h3>
-            <p>Wanna be a realtor agent? all you have to do.<br>is complete some few steps and arrange all relevant info<br>while pending for your respondsbefore the end of the day. </p>      
+            <p> Wanna be a realtor agent with Koral city? all you have to do.<br>is complete some few steps and arrange all relevant info<br>while pending for your respondsbefore the end of the day. </p>      
           </div>
         </div>
         <div class="row">
@@ -23,10 +48,7 @@
               </div>
               <div class="work-box-text">
                 <p>here you search for the location to which you wanna cover in your listings and then move to the next step. </p>
-              </div>
-              <div class="work-box-link">
-                <a href="#">Register now</a>
-              </div>           
+              </div>          
             </div>
           </div>
           <div class="col-12 col-md-12 col-lg-4">
@@ -40,10 +62,7 @@
               </div>
               <div class="work-box-text">
                 <p>After you've picked a location, now you search for avialable properties in that location for your listings. </p>
-              </div>
-              <div class="work-box-link">
-                <a href="#">Register now</a>
-              </div>           
+              </div>         
             </div>
           </div>
           <div class="col-12 col-md-12 col-lg-4">
@@ -57,10 +76,7 @@
               </div>
               <div class="work-box-text">
                 <p>Once you've completed step ona and two now you can contact us and you'll get back to you with a confirmation. </p>
-              </div>
-              <div class="work-box-link">
-                <a href="#">Register now</a>
-              </div>           
+              </div>          
             </div>
           </div>
         </div>
@@ -68,7 +84,7 @@
         <div class="row work-services">
           <div class="col-12 work-services-title">
             <h3>Services</h3>
-            <p>At Coralcity, we handle the operations, consulting, maintenance,<br> and administration of properties rentals to prospective clients. </p>
+            <p>At Koral City Properties, we handle the operations, consulting, maintenance,<br> and administration of properties rentals to prospective clients. </p>
           </div>
         </div>
         <div class="row">
@@ -100,24 +116,29 @@
               <div class="add-image-info flex-center">
                 <img src="{%static 'images/pointer.svg'%}" class="left" alt="">
                 <!-- image location -->
-                <p>Melbourne,Australia</p>
+                <p>Our Vision</p>
               </div>
             </div>
           </div>
           <div class="col-12 col-md-5 flex-center">
             <div class="add-info">
               <!-- Add title -->
-              <h4>Super Awesome Add</h4>
+              <h4>Our Vision</h4>
               <!-- Add Info -->
-              <p>In this space market-facing, yet UI work flows , or bake it in. Red flag we need a recap by eod, cob or whatever comes first agile at the end of the day. Not enough bandwidth closing these latest prospects is like putting socks on an octopus, yet due diligence</p>
+              <p>To actualize comfortable living for all classes of society everyone deserves a good home. With our large pool of property owners as well as those seeking property for investors and property owners as well as those seeking properties for lease or rent at friendly neihborhoods and convenient rate.Our properties are our bound</p>
             </div>
           </div>
           <div class="col-12 col-md-5 flex-center">
-            <div class="add-info add2-info">
+            <div class="add-info ">
               <!-- Add title -->
-              <h4>Super Awesome Add</h4>
+              <h4>What we do</h4>
               <!-- Add info -->
-              <p>In this space market-facing, yet UI work flows , or bake it in. Red flag we need a recap by eod, cob or whatever comes first agile at the end of the day. Not enough bandwidth closing these latest prospects is like putting socks on an octopus, yet due diligence</p>
+              <ul>  
+                <li>1. Property Management/Administration.</li><br>
+                <li>2. Property Listing /Sales/Lease/Rental Options.</li><br>
+                <li>3. Property/Land Verification.</li><br>
+                <li>4. Property Developers.</li><br>
+              </ul>
             </div>
           </div>
           <div class="col-12 col-md-7">
@@ -126,7 +147,7 @@
               <div class="add-image-info add-image-info2 flex-center">
                 <img src="{%static 'images/pointer.svg'%}" class="left" alt="">
                 <!-- image location -->
-                <p>Melbourne,Australia</p>
+                <p>What we do</p>
               </div>
             </div>
           </div>
@@ -138,10 +159,9 @@
           <div class="col-12 col-md-5 flex-center">
             <div class="add-info add3-info">
               <!-- Add title -->
-              <h4>Super Awesome Add</h4>
+              <h4>Koral City Properties</h4>
               <!-- Add info -->
-              <p>In this space market-facing, yet UI work flows , or bake it in. Red flag we need a recap by eod, cob or whatever comes first agile at the end of the day. Not enough bandwidth closing these latest prospects is like putting socks on an octopus, yet due diligence</p>
-              <button class="search-btn left show-more-btn">Show Me More</button>
+              <p>Koral City Properties offers property owners, developers and buyers/renters a viable housing market. Customers can source and connect with professional agents for the most advanced and eco-friendly housing. Established in 2021, Koral City believes everyone deserves a home with the most advanced technology and Eco-Friendly means.
             </div>
           </div>
         </div>

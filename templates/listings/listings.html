@@ -4,47 +4,70 @@
 
 
 {% block content %}
+<section class="home_banner_area hero"  id="about">
+    <div class="banner_inner d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="banner_content d-flex flex-md-row flex-column">
+              <div class="banner-left text-md-right">
+                <h1 class="text-uppercase">Properties</h1>
+              </div>
+              <div class="banner-right position-relative">
+                <p>More Then 500+ Appartments For Sell & Rent</p>
+                <span class="main_btn mt-4 mt-md-0" href="#">
+                  <a href="" >Home</a> 
+                  <i class="fa fa-arrow-right mx-2"></i>
+                  <a href="#">Properties</a> 
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
     <section id="appartments" class="py-5">
     <div class="container my-5">
       <div class="row">
           <div class="col-12">
-            <h2>More Then 500+<br>Appartments For Sell & Rent</h2>
+            
           </div>
         </div>
         <div class="row">
 
         {% if listings %}
            {% for listing in listings %}
-             <div class="col-md-6 col-lg-4 mb-4">
+              <div class="col-md-6 col-lg-4 mb-4">
                 <div class="card listing-preview">
                   <img class="card-img-top" src="{{ listing.photo_main.url}}" alt="">
                   <div class="card-img-overlay">
                     <h2>
-                      <span class="badge price Black-text">${{listing.price | intcomma}}</span>
+                      <span class="badge price Black-text">₦{{listing.price | intcomma}}</span>
                     </h2>
                   </div>
                   <div class="card-body">
                     <div class="listing-heading text-center">
                       <h4 class="text-primary">{{listing.title}}</h4>
                       <p>
-                        <i class="fas fa-map-marker text-secondary"></i> {{listing.city}} {{listing.state}}, {{listing.zipcode}}</p>
+                        <i class="fas fa-map-marker text-secondary Black-text"></i> {{listing.city}} {{listing.state}}, {{listing.zipcode}}</p>
                     </div>
                     <hr>
-                    <div class="row py-2 text-secondary">
+                    <div class="row py-1 text-secondary">
                       <div class="col-6">
-                        <i class="fas fa-th-large"></i> Type: {{listing.property_type}}</div>
+                        <p> <i class="fas fa-th-large"></i> Type: {{listing.property_type}}</p></div>
                       <div class="col-6">
-                        <i class="fas fa-bath"></i> Bathroom: {{listing.bathrooms}}</div>
+                       <p> <i class="fas fa-bath"></i> Bathroom: {{listing.bathrooms}}</p></div>
                     </div>
-                    <div class="row py-4 text-secondary">
-                      <div class="col-6">
-                        <i class="fas fa-car"></i> Garage: {{listing.garage}}</div>
-                      <div class="col-6">
-                        <i class="fas fa-bed"></i> Bedroom: {{listing.bedrooms}}</div>
+                    <div class="row py-1 text-secondary">
+                      <div class="col-6 text-secondary">
+                       <p> <i class="fas fa-car"></i> Garage: {{listing.garage}}</p></div>
+                      <div class="col-6 text-secondary">
+                       <p> <i class="fas fa-bed"></i> Bedroom: {{listing.bedrooms}}</p></div>
                     </div>
-                    <a href="{% url 'listings:listing' listing.id %}" class="btn btn-primary btn-block">More Info</a>
+                    <a href="{% url "listings:listing" listing.id %}" class="btn main-btn pointer text-center animate">More Info</a>
                   </div>
                 </div>
               </div>

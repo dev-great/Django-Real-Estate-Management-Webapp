@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="home_banner_area hero"  id="about">
+    <div class="banner_inner d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="banner_content d-flex flex-md-row flex-column">
+              <div class="banner-left text-md-right">
+                <h1 class="text-uppercase">Ages Verification</h1>
+              </div>
+              <div class="banner-right position-relative">
+                <p>
+                 Upload your documents and fill the contact form.
+                </p>
+                <span class="main_btn mt-4 mt-md-0" href="#">
+                  <a href="" >Home</a> 
+                  <i class="fa fa-arrow-right mx-2"></i>
+                  <a href="#">About</a> 
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% csrf_token %}
+   <section id="login" class="bg-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card">
+            <div class="card-header bg-primary text-white">
+              <h4>
+                <i class="fas fa-sign-in-alt"></i> Ages Verification</h4>
+            </div>
+            <div class="card-body">
+            	<!-- Alerts -->
+            	{% include 'partials/_alerts.html' %}
+              <form method="POST" enctype="multipart/form-data" action="">
+                {% csrf_token %}
+                 <div class="form-group">
+                  <label for="username">Full Name</label>
+                  <input type="text" name="name" class="form-control" required>
+                </div>
+                 <div class="form-group">
+                  <label for="username">Email</label>
+                  <input type="text" name="email" class="form-control" required>
+                </div>
+                 <div class="form-group">
+                  <label for="username">Phone Number</label>
+                  <input type="text" name="phone" class="form-control" required>
+                </div>
+                 <div class="form-group">
+                  <label for="username">Document File: </label>
+                 <input type="file" name="upload_file">
+                </div>
+                
+                <button type="submit" class="main-btn pointer text-center animate">Upload</button>                
+              </form>
+
+              <p><a href="{% url 'pages:index' %}">Return to home</p></a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+{% endblock content %}
