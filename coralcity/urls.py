@@ -36,7 +36,7 @@ urlpatterns = [
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
 
-admin.site.site_header ="Coralcity control panel"
+admin.site.site_header ="Koralcity control panel"
 admin.site.index_title ="Administrators dashboard"
 admin.site.site_title ="Control panel"
 
