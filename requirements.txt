@@ -56,7 +56,7 @@ requests==2.25.1
 requests-toolbelt==0.9.1
 rsa==4.7.2
 six==1.16.0
-sqlparse==0.4.1
+sqlparse
 uritemplate==3.0.1
 urllib3==1.26.6
 vue==0.0.1
