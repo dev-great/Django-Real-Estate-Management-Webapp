@@ -1,0 +1,71 @@
+{% extends 'blog/base.html' %}
+{% block title %}
+<title>{{post.title_tag}}</title>
+{% endblock %}
+{% block content %}
+
+
+<div id="colorlib-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <article class="blog-entry">
+              <div class="blog-wrap">
+                <span class="category text-center"><a href="blog.html">Production:</a> | <a href="blog.html">{{post.category}}</a></span>
+                <h2 class="text-center"><a href="blog.html">{{post.title}}</a></h2>
+                <div class="blog-image">
+                  <div class="owl-carousel owl-carousel2 blog-item">
+                    <div class="item">
+                      <a href="#" class="blog image-popup-link" style="background-image: url('{{post.img.url}}');">
+                      </a>
+                    </div>
+                    <div class="item">
+                      <a href="#" class="blog image-popup-link" style="background-image: url('{{post.img.url}}');">
+                      </a>
+                    </div>
+                  </div>
+                 
+                </div>
+                 <span class="category text-center"><a href=""><i class="icon-calendar3"></i> {{post.post_date | date:'d F y'}}</a> | <a href="" class="posted-by"><i class="icon-user2"></i> by {{post.author.first_name}}</a> | <a href=""><i class="icon-bubble3"></i> {{ post.comments.all.count }} Comments</a></span>
+              <div class="desc">
+                <p class="first-letra">{{post.body | safe}}</p>
+               
+              </div>
+            </article>
+
+
+
+{% if not request.user.is_authenticated %}
+<div class="alert alert-danger">To comment, first <a href="">log in</a> to your account</div>
+{% endif %}
+
+
+  <div class="form-group">
+    <form action="{% url 'blog:send_comment' post.slug %}" method="POST">
+      {% csrf_token %}
+      <input type="hidden" name="post_id" value="{{ post.id }}">
+      <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea><br>
+      <button type="submit" class="btn-primary btn-custom" style="background-color:#f6490d; border-color: #f6490d; font-style: normal;">Add Comment</button>
+    </form>
+  </div>
+
+
+   <div class="comment-box">
+     <h2 class="colorlib-heading-2">3 Comments</h2>
+  {% for comment in post.comments.all %}
+              <div class="comment-post">
+                <div class="user"></div>
+                <div class="desc">
+                  <h3>{{ comment.sender.first_name}}<span>{{ comment.create_at }}</span></h3>
+                  <p>{{ comment.message }}</p>
+                </div>
+              </div>
+  {% empty %}
+    </div>
+    <div class="alert alert-danger">There is no comment</div>
+  {% endfor %}
+</div>
+
+{% endblock %}
+
+         

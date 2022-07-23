@@ -1,0 +1,633 @@
+/* Start About Area css
+=========================================================================================== */
+
+.feature-area {
+    padding-bottom: 80px;
+    @media (max-width: 991px) {
+        padding-bottom: 30px;
+    }
+    .section-title-wrap {
+        h4 {
+            font-size: 16px;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+        p {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.single-feature {
+    margin-bottom: 60px;
+    @include transition;
+    h4 {
+        margin-top: 25px;
+        font-size: 21px;
+        font-weight: 400;
+        margin-bottom: 25px;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+    a {
+        display: inline-block;
+        color: $title-color;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        position: relative;
+        @include transition;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: 13px;
+            width: 40px;
+            height: 3px;
+            background: $primary-color;
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+        }
+    }
+    &:hover {
+        a {
+            padding-left: 60px;
+            &:before {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+/* Start About Area css
+=========================================================================================== */
+
+/* Start About Area css
+=========================================================================================== */
+
+.about-area {
+    background: url(../img/about/about-bg.png) no-repeat center;
+    background-position: top center;
+    padding-bottom: 80px;
+    @media (max-width: 991px) {
+        padding-bottom: 10px;
+    }
+    .activity {
+        .activity_box {
+            margin-bottom: 30px;
+            border-bottom: 3px solid #e4e7e9;
+            margin-bottom: 70px;
+            @include transition();
+            h3 {
+                margin-top: 20px;
+                margin-bottom: 0px;
+                font-size: 42px;
+                font-weight: 700;
+            }
+            p {
+                margin-bottom: 20px;
+            }
+            &:hover {
+                border-bottom: 3px solid $primary-color;
+            }
+        }
+    }
+}
+
+.single_brand {
+    text-align: center;
+    padding: 20px 15px;
+    @include transition();
+    border: 1px solid #e4e7e9;
+    @media (max-width: 991px) {
+        border: 0px;
+        margin-bottom: 50px;
+    }
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+        border-top: 0px;
+    }
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
+        border-bottom: 0px;
+    }
+    &:nth-child(1),
+    &:nth-child(4) {
+        border-left: 0px;
+    }
+    &:nth-child(3),
+    &:nth-child(6) {
+        border-right: 0px;
+    }
+    img {
+        @include filter(grayscale(100%));
+        opacity: 0.3;
+        @include transition();
+    }
+    &:hover {
+        background: #ffffff;
+        box-shadow: 0px 10px 40px -14px $primary-color;
+        img {
+            @include filter(grayscale(0%));
+            opacity: 1;
+        }
+    }
+}
+
+/* End About Area
+=========================================================================================== */
+
+/* Start Service Area
+=========================================================================================== */
+
+.service-area {
+    position: relative;
+    margin-bottom: 120px;
+    @media (max-width: 991px) {
+        margin-bottom: 70px;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 1316px;
+        background: $title-color;
+        z-index: -1;
+        @media (max-width: 991px) {
+            height: 1817px;
+        }
+        @media (max-width: 767px) {
+            height: 2174px;
+        }
+    }
+}
+
+.single-service {
+    .service-box {
+        background: $title-color;
+        @include transition();
+        border: 1px solid rgba(#ffffff, .3);
+        padding: 50px 50px 45px;
+        margin-bottom: 30px;
+        @media (max-width: 767px) {
+            padding: 50px 20px 45px;
+        }
+    }
+    .thumb {
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+    .f-img {
+        @include transition();
+    }
+    h3 {
+        color: #ffffff;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 30px;
+        text-transform: uppercase;
+        @include transition();
+        br {
+            @media (max-width: 991px) {
+                display: none;
+            }
+        }
+    }
+    p {
+        margin: 20px 0px;
+    }
+    a {
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #ffffff;
+        letter-spacing: 0.5px;
+        position: relative;
+        @include transition;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: 7px;
+            width: 40px;
+            height: 3px;
+            background: $primary-color;
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+        }
+    }
+    &:hover {
+        .service-box {
+            background: #ffffff;
+        }
+        h3 {
+            color: $primary-color;
+        }
+        .f-img {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+        a {
+            color: $title-color;
+            padding-left: 60px;
+            &:before {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+/* End Service Area
+=========================================================================================== */
+
+/* Start Quote Area
+=========================================================================================== */
+
+.quote-area {
+    position: relative;
+    z-index: 5;
+    .nav-tabs {
+        border: 0px;
+        .nav-link {
+            padding: 8px 38px;
+            border: 0px;
+            font-size: 16px;
+            background: #ffffff;
+            border-radius: 0px;
+            color: $title-color;
+            @media (max-width: 420px) {
+                padding: 8px 17px;
+            }
+            &.active,
+            &:hover {
+                color: $primary-color;
+                border-bottom: 3px solid $primary-color;
+            }
+        }
+    }
+    .tab-content {
+        background: #ffffff;
+        padding: 30px 40px 50px;
+    }
+    .estimated-cost {
+        box-shadow: 0px 10px 30px -10px rgba($primary-color, 0.2);
+        label {
+            color: $title-color;
+            font-size: 12px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 0px;
+        }
+        .form-wrap {
+            @media(max-width: 413px) {
+                padding:0px;
+            }
+            .confirm_btn_box {
+                @media (max-width: 420px) {
+                    padding-bottom: 50px;
+                }
+            }
+            .main_btn {
+                border-radius: 0;
+            }
+            .form-control {
+                margin-bottom: 10px;
+                border-radius: 0px;
+                padding: 0.675rem 0.75rem;
+                font-size: 13px;
+                font-weight: 300;
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+            .current {
+                margin-left: -32px;
+                font-size: 13px;
+            }
+            .form-select .nice-select {
+                border: 1px solid #ced4da;
+                margin-bottom: 10px;
+                background: $white !important;
+            }
+            .form-select .nice-select .list {
+                border: 1px solid $primary-color;
+                .option {
+                    padding-left: 15px;
+                    &:hover {
+                        color: $primary-color;
+                    }
+                    &.selected {
+                        color: $primary-color;
+                    }
+                }
+            }
+            .primary-btn {
+                width: 100%;
+                margin-top: 5px;
+            }
+            textarea {
+                width: 100%;
+                border: 1px solid #ced4da;
+                margin-bottom: 20px;
+                padding: 0.675rem 0.75rem;
+                font-size: 13px;
+                font-weight: 300;
+                &:focus {
+                    border: 1px solid $primary-color;
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+/* End Quote Area
+=========================================================================================== */
+
+/* Start Testimonial Area
+=========================================================================================== */
+
+.testimonial-area {
+    .owl-carousel {
+        &.active_testimonial {
+            img {
+                width: auto;
+            }
+        }
+        .owl-nav {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: space-between;
+            justify-content: space-between;
+            position: absolute;
+            width: 150%;
+            left: -182px;
+            top: 37%;
+            @include transform(translateY(-50%));
+            z-index: -1;
+            @media (max-width: 1199px) {
+                width: 140%;
+                left: -125px;
+            }
+            @media (max-width: 991px) {
+                display: none;
+            }
+            .owl-prev,
+            .owl-next {
+                background: $primary-color;
+                padding: 10px 17px;
+                color: #fff;
+                z-index: 1;
+                @include transition();
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                    bottom: 5px;
+                    right: 5px;
+                    background: $primary-color;
+                    z-index: -1;
+                    @include transition();
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: 5px;
+                    right: 5px;
+                    border-right: 8px solid #ffffff;
+                    border-left: 8px solid transparent;
+                    border-bottom: 8px solid #ffffff;
+                    border-top: 8px solid transparent;
+                    @include transition();
+                }
+                &:hover {
+                    background: $title-color;
+                    &:before {
+                        background: $title-color;
+                    }
+                    &:after {
+                        border-right: 8px solid #ffffff;
+                        border-bottom: 8px solid #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.single_testi {
+    text-align: center;
+    background: $primary-color;
+    color: #ffffff;
+    padding: 70px 15px;
+    margin-bottom: 150px;
+    box-shadow: 0px 40px 91px -37px rgba($primary-color, 0.5);
+    position: relative;
+    @media (max-width: 991px) {
+        margin-bottom: 100px;
+    }
+    .testi_content {
+        max-width: 458px;
+        margin: auto;
+        h1 {
+            font-size: 42px;
+            line-height: 45px;
+            margin-bottom: 30px;
+            @media (max-width: 480px) {
+                font-size: 34px;
+            }
+        }
+        p {
+            margin-bottom: 0px;
+            font-style: italic;
+        }
+    }
+    .testi_author {
+        margin-top: 40px;
+        .a-desc {
+            h6 {
+                margin-bottom: 5px;
+                color: #ffffff;
+                font-weight: 400;
+                font-size: 18px;
+                text-transform: uppercase;
+            }
+            p {
+                margin-bottom: 0px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+/* End Testimonial Area
+=========================================================================================== */
+
+/* Start Recent Blog Area
+=========================================================================================== */
+.home-blog-area {
+    margin-bottom: 120px;
+    @media (max-width: 991px) {
+        margin-bottom: 70px;
+    }
+}
+
+.single-home-blog {
+    position: relative;
+    margin-bottom: 30px;
+    .thumb {
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+    .large-img {
+        position: absolute;
+        top: 0px;
+        z-index: -1;
+    }
+    .overlay {
+        background: rgba($title-color, 0.85);
+    }
+    .home-blog-box {
+        border: 1px solid #e4e7e9;
+        padding: 50px 50px 45px;
+        position: relative;
+        z-index: 1;
+        @media (max-width: 1199px) {
+            padding: 40px 15px 35px;
+        }
+    }
+    h4 {
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 30px;
+        text-transform: uppercase;
+        @include transition();
+    }
+    a {
+        color: #222;
+    }
+    .name {
+        font-size: 13px;
+        font-weight: 100;
+    }
+    p {
+        text-align: left;
+        margin: 16px 0px 18px;
+    }
+    .bottom {
+        border-top: 1px solid #e4e7e9;
+        padding-top: 12px;
+        a {
+            display: inline-block;
+            margin-right: 30px;
+            position: relative;
+            color: rgba($text-color, .7);
+            font-size: 14px;
+            @include transition();
+            &:after {
+                content: '|';
+                position: absolute;
+                right: -15px;
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-left: 0;
+                &:after {
+                    content: none;
+                }
+            }
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+    .f-img {
+        @include transition();
+    }
+    &:hover {
+        cursor: pointer;
+        h4 {
+            color: $primary-color;
+        }
+        .f-img {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+    }
+}
+
+/* End Recent Blog Area
+=========================================================================================== */
+
+/* Start CTA Area css
+============================================================================================ */
+
+.cta_inner {
+    background: $primary-color;
+    padding: 58px 68px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0px 40px 91px -37px rgba($primary-color, 0.5);
+    @media (max-width: 991px) {
+        padding: 54px 15px;
+    }
+    h1 {
+        color: #ffffff;
+        font-size: 42px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 0px;
+        @media (max-width: 991px) {
+            font-size: 30px;
+        }
+    }
+    p {
+        color: #ffffff;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 0;
+    }
+    .main_btn {
+        background: #ffffff;
+        color: $title-color;
+        &:before {
+            background: #ffffff;
+        }
+        &:after {
+            border-right: 10px solid $primary-color;
+            border-bottom: 10px solid $primary-color;
+        }
+        &:hover {
+            color: #ffffff;
+            &:before {
+                background: $primary-color;
+            }
+            &:after {
+                border-right: 10px solid #ffffff;
+                border-bottom: 10px solid #ffffff;
+            }
+        }
+    }
+}
+
+/* End CTA Area css
+============================================================================================ */

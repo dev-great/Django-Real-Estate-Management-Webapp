@@ -1,0 +1,95 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- Favicon -->
+ <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,200,300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  
+  <link rel="stylesheet" href="{% static 'new/css/animate.css' %}">
+  <link rel="stylesheet" href="{% static 'new/css/icomoon.css' %}">
+  <link rel="stylesheet" href="{% static 'new/css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'new/css/magnific-popup.css' %}">
+  <link rel="stylesheet" href="{% static 'new/css/flexslider.css' %}">
+  <link rel="stylesheet" href="{% static 'new/css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'new/css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'new/fonts/flaticon/font/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'new/css/style.css' %}">
+  <script src="{% static 'new/js/modernizr-2.6.2.min.js' %}"></script>
+
+      <!-- Favicon -->
+      
+    <link rel="icon" type="image/png" href="{% static './images/favicon.png' %}" />
+    <link href="{% static './css/bootstrap.min.css' %}"  rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'new/style.css' %}"> 
+    <link rel="icon" href="{% static 'new/img/core-img/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'new/vendors/linericon/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'new/css/font-awesome.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'new/vendors/owl-carousel/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'new/vendors/nice-select/css/nice-select.css' %}" />
+    <link rel="stylesheet" href="{% static 'new/vendors/animate-css/animate.css' %}" />
+    <link rel="stylesheet" href="{% static 'new/vendors/jquery-ui/jquery-ui.css' %}" />
+
+
+    {% block title %}
+    <title>Blog App</title>
+    {% endblock %}
+  </head>
+<body>
+    <header class="header-area">
+
+        {% include 'partials/_navbar.html' %}
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+
+
+ 
+          {% block content %}
+          {% endblock %}
+          
+</body>
+          
+       
+     <!-- ##### Footer Area End ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+ <script src="{% static 'new/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'new/js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'new/js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'new/js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'new/js/active.js' %}"></script>
+
+
+  <!-- jQuery -->
+  <script src="{% static 'new/js/jquery.min.js' %}"></script>
+  <!-- jQuery Easing -->
+  <script src="{% static 'new/js/jquery.easing.1.3.js' %}"></script>
+  <!-- Bootstrap -->
+  <script src="{% static 'new/js/bootstrap.min.js' %}"></script>
+  <!-- Waypoints -->
+  <script src="{% static 'new/js/jquery.waypoints.min.js' %}"></script>
+  <!-- Flexslider -->
+  <script src="{% static 'new/js/jquery.flexslider-min.js' %}"></script>
+  <!-- Owl carousel -->
+  <script src="{% static 'new/js/owl.carousel.min.js' %}"></script>
+  <!-- Magnific Popup -->
+  <script src="{% static 'new/js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'new/js/magnific-popup-options.js' %}"></script>
+  <!-- Main -->
+  <script src="{% static 'new/js/main.js' %}"></script>
+
+</html>

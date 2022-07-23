@@ -1,0 +1,79 @@
+body {
+    line-height: 30px;
+    font-size: 16px;
+    font-family: $primary-font;
+    font-weight: 400;
+    color: $text-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $primary-font;
+    font-weight: 700;
+    color: $title-color;
+    line-height: 1.3;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+button {
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+ul {
+    padding-left: 0px;
+    list-style: none;
+}
+
+// Font Size
+.fs-14 {
+    font-size: 14px !important;
+}
+
+// Padding Bottom
+.pb-30 {
+    padding-top: 30px !important;
+}
+
+// Padding Top
+.pt-30 {
+    padding-top: 30px !important;
+}
+
+// Margin Bottom
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+// Margin Right
+.mr-10 {
+    margin-right: 10px;
+}
+
+.mr-13 {
+    margin-right: 30px;
+}
+
+// Margin Top
+.mt-25 {
+    margin-top: 25px;
+}

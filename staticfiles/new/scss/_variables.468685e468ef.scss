@@ -1,0 +1,54 @@
+/*font Variables*/
+
+$primary-font: 'Roboto Condensed', sans-serif;
+/*Color Variables*/
+
+$primary-color: #e72727;
+$title-color: #262533;
+$text-color: #8f8f8f;
+$lightGray: #f9f9ff;
+$gray: #dddddd;
+$white: #ffffff;
+$black: #000000;
+/*=================== fonts ====================*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+// Mixins
+@mixin transition($property: all,
+$duration: 300ms,
+$animate: linear,
+$delay:0s) {
+    transition: $property $duration $animate $delay;
+}
+
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -o-transform: $transform;
+    -ms-transform: $transform;
+    transform: $transform;
+}
+
+@mixin filter($filter) {
+    -webkit-filter: $filter;
+    -moz-filter: $filter;
+    -o-filter: $filter;
+    -ms-filter: $filter;
+    filter: $filter;
+}
+
+// Placeholder Mixins
+@mixin placeholder {
+    &.placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}

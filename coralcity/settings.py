@@ -44,8 +44,15 @@ INSTALLED_APPS = [
     'realtors.apps.RealtorsConfig',
     'accounts.apps.AccountsConfig',
     'contacts.apps.ContactsConfig',
-    'django.contrib.humanize'
+    'django.contrib.humanize',
+    'blog',
+    'graphene_django',
+    'ckeditor',
 ]
+
+GRAPHENE = {
+    'SCHEMA': 'blog.schema.schema'
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

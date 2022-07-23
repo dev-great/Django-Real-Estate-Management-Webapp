@@ -1,0 +1,55 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 17/01/2018 04:05
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-worker:before { content: "\f100"; }
+.flaticon-architect-with-helmet:before { content: "\f101"; }
+.flaticon-sketch:before { content: "\f102"; }
+.flaticon-conveyor:before { content: "\f103"; }
+.flaticon-skyline:before { content: "\f104"; }
+.flaticon-crane:before { content: "\f105"; }
+.flaticon-engineering:before { content: "\f106"; }
+.flaticon-engineer:before { content: "\f107"; }
+    
+    $font-Flaticon-worker: "\f100";
+    $font-Flaticon-architect-with-helmet: "\f101";
+    $font-Flaticon-sketch: "\f102";
+    $font-Flaticon-conveyor: "\f103";
+    $font-Flaticon-skyline: "\f104";
+    $font-Flaticon-crane: "\f105";
+    $font-Flaticon-engineering: "\f106";
+    $font-Flaticon-engineer: "\f107";

@@ -1,0 +1,153 @@
+/* =================================== */
+
+/*  Footer Styles
+/* =================================== */
+
+.footer-area {
+    position: relative;
+    @media (max-width: 991px) {
+        margin-top: 100px;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        height: 582px;
+        background: $title-color;
+        @media (max-width: 991px) {
+            height: 100%;
+        }
+    }
+    h6 {
+        margin-bottom: 25px;
+        font-size: 18px;
+        font-weight: 400;
+        color: #ffffff;
+        text-transform: uppercase;
+    }
+}
+
+.copy-right-text {
+    i,
+    a {
+        color: $primary-color;
+    }
+}
+
+.footer-social {
+    a {
+        padding-right: 25px;
+        @include transition();
+        &:hover {
+            i {
+                color: $primary-color;
+            }
+        }
+    }
+    i {
+        color: #cccccc;
+        @include transition();
+    }
+    @media (max-width: 991px) {
+        text-align: left;
+    }
+}
+
+.single-footer-widget {
+    input {
+        height: 50px;
+        border: none;
+        width: 80% !important;
+        font-weight: 300;
+        background: transparent;
+        padding-left: 20px;
+        border-radius: 0;
+        font-size: 14px;
+        padding: 10px 18px;
+        border: 1px solid #444444;
+        &:focus {
+            box-shadow: none;
+            background: transparent;
+        }
+    }
+    .bb-btn {
+        color: $primary-color;
+        color: #fff;
+        font-weight: 300;
+        border-radius: 0;
+        z-index: 9999;
+        cursor: pointer;
+    }
+    .info {
+        position: absolute;
+        margin-top: 50px;
+        color: #fff;
+        font-size: 12px;
+        background: transparent;
+        &.valid {
+            color: green;
+        }
+        &.error {
+            color: red;
+        }
+    }
+    .click-btn {
+        background-color: $primary-color;
+        color: #fff;
+        border-radius: 0;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        padding: 13px 19px;
+        border: 0;
+    }
+    ::-moz-selection {
+        /* Code for Firefox */
+        background-color: #191919 !important;
+        color: $text-color;
+    }
+    ::selection {
+        background-color: #191919 !important;
+        color: $text-color;
+    }
+    ::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: $text-color;
+        font-weight: 300;
+    }
+    :-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: $text-color;
+        opacity: 1;
+        font-weight: 300;
+    }
+    ::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: $text-color;
+        opacity: 1;
+        font-weight: 300;
+    }
+    :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: $text-color;
+        font-weight: 300;
+    }
+    ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: $text-color;
+        font-weight: 300;
+    }
+    @media (max-width: 991px) {
+        margin-bottom: 40px;
+    }
+}
+
+.footer-text {
+    padding-top: 20px;
+    margin-bottom: 0px;
+    a,
+    i {
+        color: $primary-color;
+    }
+}

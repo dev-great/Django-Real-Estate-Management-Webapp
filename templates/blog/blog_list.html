@@ -1,0 +1,149 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+ <div>
+    <div id="colorlib-container">
+      <div class="container">
+          <div class="content">
+{% for post in posts %}
+
+            <article class="blog-entry">
+              <div class="blog-wrap">
+                <span class="category text-center"><a href="blog.html">Production:</a> | <a href="blog.html">{{post.category}}</a></span>
+                <h2 class="text-center"><a href="{% url 'blog:blog-detail' post.slug %}">{{post.title}}</a></h2>
+                <div class="blog-image">
+                  <div class="owl-carousel owl-carousel2 blog-item">
+                    <div class="item">
+                      <a href="{% url 'blog:blog-detail' post.slug %}" class="blog image-popup-link" style="background-image: url('{{post.img.url}}');">
+                      </a>
+                    </div>
+                    <div class="item">
+                      <a href="{% url 'blog:blog-detail' post.slug %}" class="blog image-popup-link" style="background-image: url('{{post.img.url}}');">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <span class="category text-center"><a href=""><i class="icon-calendar3"></i> {{post.post_date | date:'d F y'}}</a> | <a href="" class="posted-by"><i class="icon-user2"></i> by {{post.author.first_name}}</a> | <a href=""><i class="icon-bubble3"></i> {{ post.comments.all.count }} Comments</a></span>
+              </div>
+              <div class="desc">
+                <p class="first-letra">{{post.body | slice:':450' | safe}} </p>
+              </div>
+              <p class="text-center"><a href="{% url 'blog:blog-detail' post.slug %}" class="btn-primary btn-custom" style="background-color:#f6490d; border-color: #f6490d;">Continue Reading</a></p>
+            </article>
+           
+           
+    {% endfor %}
+    <div>
+          <nav aria-label="...">
+            <ul class="pagination">
+            {% if is_paginated %}
+              {% if page_obj.has_previous %}
+                <li class="page-item"><a class="page-link" style="color:black" href="?page=1"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+                <li class="page-item"><a class="page-link" style="color:black" href="?page={{ page_obj.previous_page_number }}"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+              {% endif %}
+              {% for num in page_obj.paginator.page_range %}
+                {% if num == page_obj.number %}
+                  <li class="page-item active"><a class="page-link" style="color:#ffffff; background-color: black; border-color: black;" href="?page={{num}}">{{num}}</a></li>
+                {% elif num > page_obj.number|add:'-2' and num < page_obj.number|add:'2' %}
+                  <li class="page-item"><a class="page-link" style="color:black" href="?page={{num}}">{{num}}</a></li>
+                {% endif %}
+              {% endfor %}
+              {% if page_obj.has_next %}
+                <li class="page-item"><a class="page-link" style="color:black" href="?page={{page_obj.next_page_number}}"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li class="page-item"><a class="page-link" style="color:black" href="?page={{ page_obj.paginator.num_pages }}"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+              {% endif %}
+            {% endif %}
+            </ul>
+          </nav>
+          </div>
+        </div>
+        {% block sidebar %}
+          <aside class="sidebar">
+            <div class="side">
+              <div class="form-group">
+                <form action="{% url 'blog:search' %}" method="GET">
+                <input type="text" class="form-control" name="q" value="{{request.GET.q}}" placeholder="Enter keywords &amp; hit enter....">
+                <button type="submit" class="btn btn-primary"><i class="icon-search3"></i></button>
+                </form>
+              </div>
+            </div>
+            <div class="side-wrap">
+              <h2 class="sidebar-heading">About Me</h2>
+              <div class="author-img" style="background-image: url('https://images.unsplash.com/photo-1560179707-f14e90ef3623?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80');"></div>
+              <p> <strong>Koralcity Limited</strong> offers property owners, developers and buyers/renters a viable housing market. Customers can source and connect with professional agents for the most advanced and eco-friendly housing. Established in 2021, Koral City believes everyone deserves a home with the most advanced technology and Eco-Friendly means. All lives matter.</p>
+              <p>
+                <ul class="colorlib-social-icons">
+                  <li><a href="#"><i class="icon-twitter"></i></a></li>
+                  <li><a href="#"><i class="icon-facebook"></i></a></li>
+                  <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                  <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                </ul>
+              </p>
+            </div>
+            <div class="side-wrap">
+              <h2 class="sidebar-heading">Recent Post</h2>
+
+              {% for post in latestpost_list %}
+              <div class="f-entry">
+                <a href="{% url 'blog:blog-detail' post.slug %}" class="featured-img" style="background-image: url('{{post.img.url}}');"></a>
+                <div class="desc">
+                  <span><i class="icon-calendar3"></i> {{post.post_date| date:'d F y'}}</span>
+                  <h3><a href="{% url 'blog:blog-detail' post.slug %}">{{post.title}}</a></h3>
+                  <h3><a href="#"></a></h3>
+                </div>
+              </div>
+              {% endfor %}
+             
+            </div>
+
+            <div class="side-wrap">
+              <h2 class="sidebar-heading">Categories</h2>
+              <ul class="category">
+                {% for categories in cat_list %}
+                <li><a href="{% url 'blog:category' categories %}"><span class="badge bg-dark">{{categories.category_set.count}}</span><i class="icon-check"></i>{{categories}}</a> </li>
+                    {% endfor %}
+              </ul>
+            </div>
+
+        
+            
+
+            <div class="side-wrap">
+              <h2 class="sidebar-heading">Tags</h2>
+                <p class="tags">
+                  <div class="button-cuz"><p>
+                    {% for categories in cat_list %}
+                      <span><a href="{% url 'blog:category' categories %}"><i class="icon-tag"></i>{{categories}}</a></span>
+                       {% endfor %}
+                    </p>
+                  </div>
+               </p>
+            </div>
+
+           
+            <div class="side">
+              <h2 class="sidebar-heading">Subscribe to our newsletter</h2>
+              <div class="row">
+                <div class="col-md-12 col-md-offset-0">
+                  <div class="form-group">
+                    <input type="text" class="form-control form-email text-center" id="email" placeholder="Enter your email">
+                    <button type="submit" class="btn btn-primary btn-subscribe">Subscribe</button>
+                  </div>
+                </div>
+                <p>
+                  <ul class="colorlib-social-icons text-center">
+                    <li><a href="#"><i class="icon-twitter"></i></a></li>
+                    <li><a href="#"><i class="icon-facebook"></i></a></li>
+                    <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                    <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </aside> 
+        </div>
+      </div>
+        {% endblock %}
+
+
+{% endblock %}

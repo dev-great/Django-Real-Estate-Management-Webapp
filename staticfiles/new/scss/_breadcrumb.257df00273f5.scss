@@ -1,0 +1,120 @@
+/* Home Banner Area css
+============================================================================================ */
+
+
+.blog_banner {
+    min-height: 780px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin-bottom: 0px;
+    .banner_inner {
+        background: #04091e;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        min-height: 780px;
+        z-index: 1;
+        .overlay {
+            background: url(../img/banner/banner-2.jpg) no-repeat scroll center center;
+            opacity: .5;
+            height: 125%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            z-index: -1;
+        }
+        .blog_b_text {
+            max-width: 700px;
+            margin: auto;
+            color: #fff;
+            margin-top: 40px;
+            h2 {
+                font-size: 60px;
+                font-weight: 500;
+                font-family: $primary-font;
+                line-height: 66px;
+                margin-bottom: 15px;
+            }
+            p {
+                font-size: 16px;
+                margin-bottom: 35px;
+            }
+            .white_bg_btn {
+                line-height: 42px;
+                padding: 0px 45px;
+            }
+        }
+    }
+}
+
+.banner_box {
+    max-width: 1620px;
+    margin: auto;
+}
+
+.banner_area {
+    position: relative;
+    z-index: 1;
+    min-height: 470px;
+    .banner_inner {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        min-height: 470px;
+        background: url(../img/banner-bg.jpg) no-repeat center bottom;
+        background-size: auto;
+        z-index: 1;
+        .overlay {
+            background: rgba(0, 0, 0, 0.42);
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+        .banner_content {
+            position: relative;
+            z-index: 10;
+            h2 {
+                color: #ffffff;
+                font-size: 48px;
+                font-family: $primary-font;
+                margin-bottom: 12px;
+                font-weight: 500;
+                margin-top: 120px;
+            }
+            .page_link {
+                a {
+                    font-size: 14px;
+                    color: #ffffff;
+                    font-family: $primary-font;
+                    margin-right: 32px;
+                    position: relative;
+                    &:before {
+                        content: "\e87a";
+                        font-family: 'Linearicons-Free';
+                        font-size: 14px;
+                        position: absolute;
+                        right: -25px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    &:last-child {
+                        margin-right: 0px;
+                        &:before {
+                            display: none;
+                        }
+                    }
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* End Home Banner Area css
+============================================================================================ */

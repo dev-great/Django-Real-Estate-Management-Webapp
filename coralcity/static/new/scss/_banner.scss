@@ -1,0 +1,99 @@
+//--------- Start Home Banner Area -------------//
+.home_banner_area {
+    background: url(../img/banner/home.jpg) no-repeat center top;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    @media (max-width: 991px) {
+        margin-top: 72px;
+    }
+    &.banner-area {
+        background: url(../img/banner/common-banner.jpg) no-repeat center top;
+        background-size: cover;
+        .banner_inner {
+            .banner-left {
+                padding: 30px 53px;
+                @media (max-width: 991px) {
+                    padding: 30px 20px;
+                }
+                h1 {
+                    @media (max-width: 767px) {
+                        font-size: 35px;
+                    }
+                }
+            }
+            .banner-right {
+                padding: 30px 40px;
+                @media (max-width: 991px) {
+                    padding: 30px 20px;
+                }
+            }
+            .banner_content {
+                padding: 68px 0px;
+            }
+        }
+    }
+    .banner_inner {
+        position: relative;
+        width: 100%;
+        .banner_content {
+            padding: 194px 0px;
+            vertical-align: middle;
+            @media (max-width: 991px) {
+                padding: 100px 0px;
+            }
+        }
+        .banner-left {
+            background: $title-color;
+            padding: 60px 53px;
+            @media (max-width: 991px) {
+                padding: 60px 20px;
+            }
+            h1 {
+                font-size: 48px;
+                color: $white;
+                margin: 0;
+                @media (max-width: 767px) {
+                    font-size: 35px;
+                }
+            }
+        }
+        .banner-right {
+            background: $white;
+            padding: 60px 40px;
+            @media (max-width: 991px) {
+                padding: 30px 20px;
+            }
+            p {
+                max-width: 498px;
+                margin: 0;
+            }
+            .main_btn {
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+                background: $title-color;
+                border: 0px;
+                @media (max-width: 767px) {
+                    position: relative;
+                }
+                &:before {
+                    background: $title-color;
+                }
+                &:hover {
+                    color: #ffffff;
+                    background: $primary-color;
+                    &:before {
+                        background: $primary-color;
+                    }
+                    &:after {
+                        border-right: 10px solid #ffffff;
+                        border-bottom: 10px solid #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//--------- End Home Banner Area -------------//

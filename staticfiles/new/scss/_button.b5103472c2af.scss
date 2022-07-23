@@ -1,0 +1,177 @@
+/* Main Button Area css
+============================================================================================ */
+
+.main_btn {
+    position: relative;
+    display: inline-block;
+    background: $primary-color;
+    padding: 0px 40px;
+    color: #fff;
+    font-family: $primary-font;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 60px;
+    border: 0px;
+    outline: none !important;
+    box-shadow: none !important;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 1;
+    @include transition;
+    @media (max-width: 767px) {
+        line-height: 50px;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        bottom: 5px;
+        right: 5px;
+        background: $primary-color;
+        border: 1px solid #ffffff;
+        z-index: -1;
+        @include transition;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        border-right: 10px solid #ffffff;
+        border-left: 10px solid transparent;
+        border-bottom: 10px solid #ffffff;
+        border-top: 10px solid transparent;
+        @include transition;
+    }
+    &:hover {
+        color: $title-color;
+        &:before {
+            background: #ffffff;
+        }
+        &:after {
+            border-right: 10px solid $primary-color;
+            border-bottom: 10px solid $primary-color;
+        }
+    }
+}
+
+.main_btn2 {
+    display: inline-block;
+    background: $title-color;
+    padding: 0px 30px;
+    color: #fff;
+    font-family: $primary-font;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 48px;
+    border: 1px solid $title-color;
+    border-radius: 0px;
+    outline: none !important;
+    box-shadow: none !important;
+    text-align: center;
+    cursor: pointer;
+    @include transition;
+    border-radius: 5px;
+    text-transform: capitalize;
+    margin-top: 30px;
+    &:hover {
+        background: $primary-color;
+        color: $white;
+        border: 1px solid $primary-color;
+    }
+}
+
+.submit_btn {
+    display: inline-block;
+    background: $primary-color;
+    padding: 0px 30px;
+    color: #fff;
+    font-family: $primary-font;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 38px;
+    border: 1px solid $primary-color;
+    border-radius: 0px;
+    outline: none !important;
+    box-shadow: none !important;
+    text-align: center;
+    border: 1px solid $primary-color;
+    cursor: pointer;
+    @include transition;
+    &:hover {
+        background: transparent;
+        color: $primary-color;
+    }
+}
+
+.white_bg_btn {
+    display: inline-block;
+    background: #f9f9ff;
+    padding: 0px 35px;
+    color: $title-color;
+    font-family: $primary-font;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 34px;
+    border-radius: 0px;
+    outline: none !important;
+    box-shadow: none !important;
+    text-align: center;
+    border: 1px solid #eeeeee;
+    cursor: pointer;
+    @include transition;
+    &:hover {
+        background: $primary-color;
+        color: #fff;
+        border-color: $primary-color;
+    }
+}
+
+.org_btn {
+    padding: 0px 40px;
+    background-image: linear-gradient(to right, #f766a5 0%, #f78762 51%, #f766a5 100%);
+    background-size: 200% auto;
+    z-index: 2;
+    display: inline-block;
+    transition: all 400ms ease-out;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: $primary-font;
+    line-height: 50px;
+    border-radius: 5px;
+    &:hover {
+        background-position: right center;
+        color: #fff;
+    }
+}
+
+.green_btn {
+    padding: 0px 40px;
+    background-image: linear-gradient(to right, #73ca96 0%, #98d370 51%, #73ca96 100%);
+    background-size: 200% auto;
+    z-index: 2;
+    display: inline-block;
+    transition: all 400ms ease-out;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: $primary-font;
+    line-height: 50px;
+    border-radius: 5px;
+    &:hover {
+        background-position: right center;
+        color: #fff;
+    }
+}
+
+/* End Main Button Area css
+============================================================================================ */
