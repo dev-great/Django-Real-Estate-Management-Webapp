@@ -1,3 +1,4 @@
+ {% load static %}
  <!------------------------------------------------ FOOTER SECTION -->
     <footer id="contact">
       <div class="container">
@@ -16,6 +17,7 @@
           <div class="col-sm-12 col-md-4 footer-logo">
             <h4>Greamhouse</h4>
             <p>© 2021 - Greamhouse,<br>All Right Reserved</p>
+           
           </div>
           <div class="col-sm-3 col-md-2 footer-column">
             <h5>KoralCity</h5>
@@ -39,6 +41,11 @@
             <a href="{% url 'accounts:login_view' %}">Renting</a>
             <a href="{% url 'accounts:login_view' %}">Selling</a>
             <a href="{% url 'Ages:Ages' %}">AGIS Verification</a>
+          </div>
+          <div class="col-sm-3 col-md-2">
+            <a href=" https://www.facebook.com/Koral-City-ltd-100737889187297"> <img src="{% static './images/facebook.png' %}" height="40" width="40"></a>
+            <a href="https://www.instagram.com/koralcityltd/"> <img src="{% static './images/instagram.png' %} "height="40" width="40"></a>
+            <a href="https://twitter.com/Koralcityltd"><img src="{% static './images/twitter.png' %} "height="40" width="40"></a>
           </div>
         </div>
       </div>
