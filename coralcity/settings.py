@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'blog',
     'graphene_django',
-    'ckeditor',
 ]
 
 GRAPHENE = {
